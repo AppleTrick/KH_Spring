@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="favoriteFood" name="favoriteFood" class="com.test02.Food">
+		<property name="name" value="삼겹살"></property>
+		<property name="price" value="15000"></property>
+	</bean>
+	
+	<bean id="urFavoriteFood" name="urFavoriteFood" class="com.test02.Food">
+		<constructor-arg value="꽃개"></constructor-arg>
+		<constructor-arg value="35000"></constructor-arg>
+	</bean>
+	
+	<bean id="myFood" class="com.test02.MyFood" autowire="constructor">
+<!-- 		<constructor-arg ref="favoriteFood"></constructor-arg>
+		<constructor-arg ref="urFavoriteFood"></constructor-arg> -->
+	</bean>
+</beans>
