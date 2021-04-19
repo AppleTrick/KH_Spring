@@ -17,4 +17,16 @@
 <!-- 		<constructor-arg ref="favoriteFood"></constructor-arg>
 		<constructor-arg ref="urFavoriteFood"></constructor-arg> -->
 	</bean>
+	
+	
+	<!--
+	  autowire 
+	  1.byName : setter 와 같은 이름의 bean (id/name) 이 있으면 자동 할당
+	  2.byType : setter  의 praameterType과 같은 type 의 bean이 있으면 자동할당
+	  3.constructor : 생성자와 같은 이름의 bean 이 있으면 자동할당
+	  4.default : 생성자에 할당할 수 있는지 확인후 없으면 -> setter 에서 확인하여 할당
+	   -> 기본 생성자가 있으면 기본 생성자 호출
+	
+	
+	 -->
 </beans>
