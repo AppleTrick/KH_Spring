@@ -9,8 +9,13 @@ public class MTest {
 		ApplicationContext factory = new ClassPathXmlApplicationContext("com/test01/aopAppcontext.xml");
 		
 		Human person01 = factory.getBean("person01",Human.class);
-		System.out.println(person01.sayName("뽀로로"));
-		System.out.println(person01.sayJob("개발자"));
+		/*
+		 * System.out.println(person01.sayName("뽀로로"));
+		 * System.out.println(person01.sayJob("개발자"));
+		 */
+		
+		person01.sayName("뽀로로");
+		person01.sayJob("개발자");
 		
 		System.out.println("------");
 		

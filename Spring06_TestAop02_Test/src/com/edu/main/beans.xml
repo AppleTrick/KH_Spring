@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
+
+	<bean id="rect" class="com.edu.entity.Rectangle">
+		<constructor-arg value="사각형"></constructor-arg>
+		<constructor-arg value="3"></constructor-arg>
+		<constructor-arg value="5"></constructor-arg>
+	</bean>
+	
+	<bean id="tri" class="com.edu.entity.Triangle">
+		<property name="title" value="삼각형"></property>
+		<property name="data1" value="3"></property>
+		<property name="data2" value="5"></property>
+	</bean>
+	
+	<bean id="myAspect" class="com.edu.aop.MyAspect"></bean>
+	
+	<!-- 
+	autoproxy는 어노테이션 위주 
+	<aop:config>
+		<aop:pointcut expression="execution(* viewSize())" id="viewpoint"></aop:pointcut>
+		<aop:aspect ref="myAspect">
+			<aop:before method="before" pointcut-ref="viewpoint"></aop:before>
+			<aop:after method="after" pointcut-ref="viewpoint"></aop:after>
+		</aop:aspect>
+	</aop:config> 
+	
+	-->
+	
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
 </beans>

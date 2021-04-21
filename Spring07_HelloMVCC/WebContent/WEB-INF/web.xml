@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Spring07_HelloMVCC</display-name>
+  
+  
+  <!-- TODO : 01.listener -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!-- project 전체에서 사용할 수 있게 만들어줌 -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/applicationContext.xml</param-value>
+  </context-param>
+  
+  
+  <!-- TODO : 02.DispatcherServlet -->
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <!-- /*.do 아님 *.do 맞음 -->
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+</web-app>
