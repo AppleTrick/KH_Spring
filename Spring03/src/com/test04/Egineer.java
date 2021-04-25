@@ -17,10 +17,5 @@ public class Egineer {
 	@Override
 	public String toString() {
 		return emp + "\t 부서 : " + dept;
-	}
-	
-	
-	
-	
-	
+	}	
 }

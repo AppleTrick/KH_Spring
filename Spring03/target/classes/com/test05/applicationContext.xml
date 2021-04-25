@@ -12,6 +12,5 @@
 	<!-- p: property-->
 	<bean id="hong" class="com.test05.Emp" p:name="홍길동" p:salary="25000"></bean>
 	<bean id="hong-gd" class="com.test05.Engineer" p:emp-ref="hong" p:dept="기술팀"></bean>
-	
 
 </beans>

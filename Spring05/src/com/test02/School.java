@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class School {
 
-	
 	//byType -> byName
 	@Autowired
 	@Qualifier("lee")
@@ -42,9 +41,5 @@ public class School {
 	@Override
 	public String toString() {
 		return "School [person=" + person + ", grade=" + grade + "]";
-	}
-	
-	
-	
-	
+	}	
 }
