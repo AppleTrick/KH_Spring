@@ -9,37 +9,31 @@ import org.springframework.stereotype.Repository;
 
 import com.mvc.upgrade.model.dto.MYBoardDto;
 
-
 @Repository
 public class MYBoardDaoImpl implements MYBoardDao {
-	
 	
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 
 	@Override
 	public List<MYBoardDto> selectList() {
-		
 		List<MYBoardDto> list = new ArrayList<MYBoardDto>();
 		
 		try {
-			list = sqlSession.selectList(NAMESPACE+"selectList");
-			//System.out.println(list.get(0).getMyname());
+			list = sqlSession.selectList(NAMESPACE + "selectList");
+			System.out.println("출력 : " + list.get(0).getMyno());
 		} catch (Exception e) {
-			e.printStackTrace();
+			// TODO Auto-generated catch block.printStackTrace();
 		}
-		
-		
 		return list;
 	}
 
 	@Override
 	public MYBoardDto selectOne(int myno) {
-		
 		MYBoardDto dto = null;
 		
 		try {
-			dto=sqlSession.selectOne(NAMESPACE+"selectOne",myno);
+			dto = sqlSession.selectOne(NAMESPACE + "selectOne",myno);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,11 +43,11 @@ public class MYBoardDaoImpl implements MYBoardDao {
 
 	@Override
 	public int insert(MYBoardDto dto) {
+		
 		int res = 0;
 		
 		try {
 			res = sqlSession.insert(NAMESPACE + "insert",dto);
-			System.out.println(res);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -63,24 +57,21 @@ public class MYBoardDaoImpl implements MYBoardDao {
 	}
 
 	@Override
-	public int update(MYBoardDto dto) {
-		
-		int res = 0;
-		
+	public int update(MYBoardDto dto) {		
+		int res = 0;		
 		try {
 			res = sqlSession.update(NAMESPACE + "update",dto);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return res;
 	}
 
 	@Override
 	public int delete(int myno) {
-		
-		int res = 0;
-		
+		int res = 0;		
 		try {
 			res = sqlSession.delete(NAMESPACE + "delete",myno);
 		} catch (Exception e) {

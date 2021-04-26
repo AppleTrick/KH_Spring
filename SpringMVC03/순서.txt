@@ -1,9 +1,12 @@
-SpringMVC03
-01. pom.xml : ojdbc6, mybatis, mybatis-spring, commons-dbcp, spring-orm
-02. web.xml : applicationContext.xml, mapping(*.do), encodingFilter
-03. /WEB-INF/spring/sqls/test.sql
-04. dto, dao, biz, controller
-05. src/main/resources/mybatis/myboard-mapper.xml
-06. src/main/resources/mybatis/db.properties.xml
-07. /WEB-INF/spring/sqls/config.xml
-08. applicationContext.xml, servlet-context.xml
+1.  pom.xml : ojdebc , mybatis , mybatis-spring, commons-dbcp, spring orm 디펜덴시추가
+2.  web.xml : applicationContext.xml, mapping(*.do) encodingFilter
+3.  /WEB-INF/spring/sqls/test.sql
+4. dto, dao, biz, controller
+5. src/ main / resources/ mybatis /myboard-mapper.xml
+3 dbproperties
+4	/WEB-INF/spring/sqls/config.xml
+5
+6
+7
+8
+9

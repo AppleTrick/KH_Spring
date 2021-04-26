@@ -8,7 +8,6 @@
 	
 	
 	<!-- 공통 관심사항 ccc -->
-	
 	<bean id="myAdvice" class="com.test02.MyAspect"></bean>
 
 

@@ -5,16 +5,16 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
-	<!-- db.properties -->
+	<!-- db.properties 가지고옴-->
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:mybatis/db.properties</value>
 			</list>
 		</property>
-	</bean>
+	</bean>	
 	
-	<!-- dataSource -->
+	<!-- dataSource 가지고 온것으로 데이타 소스 만듬 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="${driver}"></property>
 		<property name="url" value="${url}"></property>
@@ -22,16 +22,16 @@
 		<property name="password" value="${password}"></property>
 	</bean>
 	
-	<!-- mybatis -->
+	<!-- mybatis 만든것으로 mybatis 연결-->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="WEB-INF/spring/sqls/config.xml"></property>
 	</bean>
 	
-	<!-- mybatis-template -->
+	
+	<!-- mybatis template mybatis 좀 더 편하게 쓰자.-->
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSession"></constructor-arg>
 	</bean>
-	
 		
 </beans>

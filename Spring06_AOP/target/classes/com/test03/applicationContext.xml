@@ -14,7 +14,7 @@
 	<aop:config>
 		<aop:aspect ref="myAspect">
 			<!-- <aop:before method="before" pointcut="execution(public * *(..))"/> -->
-			<aop:before method="before" pointcut="execution(public void com.test03.Woman.classWork())"/>
+			<aop:before method="before1" pointcut="execution(public void com.test03.Woman.classWork())"/>
 			<aop:after method="after" pointcut="execution(public void com.test03.Woman.classWork())"/>
 			<!-- * (리턴타입 무상관) * (메소드이름 무상관) (..) (파라미터 개수 무상관) -->
 		</aop:aspect>

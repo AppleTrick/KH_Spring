@@ -21,6 +21,7 @@ public class MyNickNamePrn {
 
 	@Override
 	public String toString() {
+		
 		return "제 별명은 " + nickName + " 입니다";
 	}
 	

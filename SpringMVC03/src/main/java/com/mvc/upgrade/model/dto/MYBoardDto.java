@@ -3,13 +3,12 @@ package com.mvc.upgrade.model.dto;
 import java.util.Date;
 
 public class MYBoardDto {
-
+	
 	private int myno;
 	private String myname;
 	private String mytitle;
 	private String mycontent;
 	private Date mydate;
-	
 	public MYBoardDto() {
 	}
 	public MYBoardDto(int myno, String myname, String mytitle, String mycontent, Date mydate) {
@@ -20,6 +19,7 @@ public class MYBoardDto {
 		this.mycontent = mycontent;
 		this.mydate = mydate;
 	}
+	
 	public int getMyno() {
 		return myno;
 	}

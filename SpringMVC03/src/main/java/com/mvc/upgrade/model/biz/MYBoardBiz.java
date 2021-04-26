@@ -12,3 +12,4 @@ public interface MYBoardBiz {
 	public int update(MYBoardDto dto);
 	public int delete(int myno);
 }
+

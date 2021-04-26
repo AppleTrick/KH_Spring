@@ -19,7 +19,7 @@ public class MyAspect implements MethodInterceptor {
 		} finally {
 			System.out.println("집에간다");
 		}
-		return null;
+		return target;
 	}
 
 }

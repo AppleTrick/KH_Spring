@@ -8,6 +8,5 @@
 	<context:component-scan base-package="com.test03"></context:component-scan>
 	<!-- com.test03 하위에 있는 모든 문서를 스캔하여 @Component 어노테이션 붙혀져 있는 것을 전부 객체화 시킨다. -->
 	
-	
 
 </beans>
