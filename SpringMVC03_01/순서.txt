@@ -1,0 +1,2 @@
+SpringMVC03
+1. pom.xml : ojdbc6, mybatis, mybatis-spring, commons-dbcp, spring-orm

@@ -29,6 +29,7 @@ public class HelloController {
 		return "/WEB-INF/views/hello.jsp";
 	}
 	
+	@RequestMapping("/bye.do")
 	public ModelAndView getBye(@RequestParam("name") String nickname) {
 		ModelAndView mav = new ModelAndView();
 		
