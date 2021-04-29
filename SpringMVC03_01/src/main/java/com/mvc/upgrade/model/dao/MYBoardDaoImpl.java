@@ -25,32 +25,62 @@ public class MYBoardDaoImpl implements MYBoardDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return list;
 	}
 
 	@Override
 	public MYBoardDto selectOne(int myno) {
 		
+		MYBoardDto dto = null;
 		
-		return null;
+		try {
+			dto = sqlSession.selectOne(NAMESPACE+"selectOne",myno);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return dto;
 	}
 
 	@Override
 	public int insert(MYBoardDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+
+		int res = 0;
+		
+		try {
+			res = sqlSession.insert(NAMESPACE+"insert",dto);
+			System.out.println("res값 : " + res);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
 	}
 
 	@Override
 	public int update(MYBoardDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		int res = 0;
+		
+		try {
+			res = sqlSession.update(NAMESPACE+"update",dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	@Override
 	public int delete(int myno) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		int res = 0;
+		
+		try {
+			res = sqlSession.delete(NAMESPACE+"delete",myno);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 }

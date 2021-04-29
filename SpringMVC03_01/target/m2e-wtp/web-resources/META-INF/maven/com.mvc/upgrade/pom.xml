@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<!-- Spring maven 이 잡아주는 것 -->
 	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- 프로젝트가 배포될때 -->
 	<groupId>com.mvc</groupId>
 	<artifactId>upgrade</artifactId>
+	
+	<!-- 프로젝트 배포 방법과 패키징 + 버젼 -->
 	<name>SpringMVC03_01</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
+	
+	<!-- version의 충돌을 안나게 하기위해 버젼을 맞춰줌 xml의 해당 버젼으로 버젼을 맞춘다./ 버젼 호환-->
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
+	
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -27,6 +36,7 @@
 				 </exclusion>
 			</exclusions>
 		</dependency>
+		<!-- spring webmvc 사용하기 위해 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -34,6 +44,7 @@
 		</dependency>
 				
 		<!-- AspectJ -->
+		<!-- apsect 작업 (AOP) 할때 작동하는 것 / AOP 작업을 수행하기 위해 필요한 의존-->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
@@ -84,6 +95,7 @@
 		</dependency>
 
 		<!-- @Inject -->
+		<!-- spring에서의 공통 어노테이션을 사용하기 위한 것 -->
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
@@ -91,6 +103,7 @@
 		</dependency>
 				
 		<!-- Servlet -->
+		<!-- MVC 역할을 누가하는지 설정해주기 위한것 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -110,6 +123,7 @@
 		</dependency>
 	
 		<!-- Test -->
+		<!-- 기능이 만들어지고 Test 하기 위한 것 / 유지보수 하기 쉬워진다. -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -125,6 +139,7 @@
 		    <version>11.2.0.3</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<!-- mybatis 사용하기 위한것 -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
@@ -137,18 +152,22 @@
 		    <version>2.0.6</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+		<!-- DBCP(Data Base Conection pool) 데이터 베이스와 연결하는 객체 (Connection 객체 data Source)-->
 		<dependency>
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-dbcp2</artifactId>
 		    <version>2.8.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+		<!-- Object - Realational Mapping -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-orm</artifactId>
 		    <version>${org.springframework-version}</version>
 		</dependency>	    
 	</dependencies>
+	
+	<!-- ojdbc6 를 받기 위한것 -->
 	<repositories>
 		<repository>
 			<id>datanuclenus</id>

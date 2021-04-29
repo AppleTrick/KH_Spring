@@ -21,6 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- 전부 스캔하여 어노테이션 사용가능하게 해줌 -->
 	<context:component-scan base-package="com.mvc.upgrade" />
 	
 	
