@@ -132,6 +132,7 @@
 		</dependency>
 		
 		<!-- 추가 -->
+		<!-- db 사용하기 위한것 -->
 		<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
 		<dependency>
 		    <groupId>oracle</groupId>
@@ -164,7 +165,22 @@
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-orm</artifactId>
 		    <version>${org.springframework-version}</version>
-		</dependency>	    
+		</dependency>	
+		
+		<!-- aop관련 --> 
+		<!-- aspectjweaver -->
+		<dependency>
+		  <groupId>org.aspectj</groupId>
+		  <artifactId>aspectjweaver</artifactId>
+		  <version>${org.aspectj-version}</version>
+		</dependency> 
+		<!-- aspectjrt -->
+		<dependency>
+		  <groupId>org.aspectj</groupId>
+		  <artifactId>aspectjrt</artifactId>
+		  <version>${org.aspectj-version}</version>
+		</dependency> 
+		 
 	</dependencies>
 	
 	<!-- ojdbc6 를 받기 위한것 -->
