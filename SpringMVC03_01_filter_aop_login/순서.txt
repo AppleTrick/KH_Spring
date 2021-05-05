@@ -29,3 +29,8 @@ SpringMVC03
  18. dto, dao, biz, controller
  19. src/main/resources/mybatis/mymember-mapper.xml
  20. WEB-INF/spring/sqls/config.xml
+ 
+ 
+ ----
+ interceptor
+ com/mvc/upgrade/common/interceptor/LoginInterceptor (impl HandlerInterceptor)
